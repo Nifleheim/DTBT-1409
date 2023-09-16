@@ -1,8 +1,6 @@
 FROM debian:stable-slim
 
-COPY ./Script ./Script
-
-WORKDIR /Script
+COPY . .
 
 RUN ./Store.sh
 
