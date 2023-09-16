@@ -8,7 +8,7 @@ PG_DB="aws-db-pg"
 TIMESTAMP=$(date +"%Y%m%d%H%M%S")
 
 # Backup directory (adjust to your preference)
-BACKUP_DIR="/path/to/backup/directory"
+BACKUP_DIR="/db/backup"
 
 # Create a backup file
 BACKUP_FILE="$BACKUP_DIR/$PG_DB-$TIMESTAMP.sql"
@@ -28,4 +28,4 @@ fi
 aws s3 cp $BACKUP_FILE s3://nama_bucketnya/
 
 # Automation and Scheduling
-0 0 * * * /path/to/backup_script.sh
+0 0 * * * /db/backup/Backup.sh
