@@ -28,4 +28,4 @@ fi
 aws s3 cp $BACKUP_FILE s3://nama_bucketnya/
 
 # Automation and Scheduling
-0 0 * * * /db/backup/Backup.sh
+0 0 * * * Backup.sh
