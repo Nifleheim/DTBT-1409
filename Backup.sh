@@ -3,6 +3,8 @@
 # PostgreSQL settings
 PG_USER="adminpost"
 PG_DB="aws-db-pg"
+PG_HOST="aws-db-pg.cyvxmusxt9s8.ap-southeast-2.rds.amazonaws.com"
+PG_PORT="5432"
 
 # Timestamp for the backup file
 TIMESTAMP=$(date +"%Y%m%d%H%M%S")
