@@ -24,8 +24,10 @@ else
     exit 1
 fi
 
+# Automation and Scheduling
+59 23 * * * Backup.sh
+
 # Upload to AWS S3
 aws s3 cp $BACKUP_FILE s3://nama_bucketnya/
 
-# Automation and Scheduling
-0 0 * * * Backup.sh
+
