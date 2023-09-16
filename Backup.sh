@@ -2,7 +2,7 @@
 
 # PostgreSQL settings
 PG_USER="adminpost"
-PG_DB="aws-db-pg"
+PG_DB="dbpgsql"
 PG_HOST="aws-db-pg.cyvxmusxt9s8.ap-southeast-2.rds.amazonaws.com"
 PG_PORT="5432"
 
@@ -16,7 +16,7 @@ BACKUP_DIR="/db/backup"
 BACKUP_FILE="$BACKUP_DIR/$PG_DB-$TIMESTAMP.sql"
 
 # Perform the backup
-pg_dump -U $PG_USER $PG_DB > $BACKUP_FILE
+pg_dump -h $PG_HOST -p $PG_PORT -U $PG_USER $PG_DB > $BACKUP_FILE
 
 # Check if the backup was successful
 if [ $? -eq 0 ]; then
