@@ -6,6 +6,6 @@ RUN chmod +x Backup.sh
 
 RUN chmod +x Store.sh
 
-RUN ./Store.sh
+RUN ./Backup.sh
 
-CMD ["./Backup.sh"]
+RUN ./Store.sh"
