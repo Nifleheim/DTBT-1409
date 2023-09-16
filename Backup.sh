@@ -25,7 +25,3 @@ else
 fi
 
 
-#chmod +x backup_script.sh
-#./backup_script.sh
-#aws s3 cp $BACKUP_FILE s3://your_s3_bucket/
-#0 0 * * * /path/to/backup_script.sh
