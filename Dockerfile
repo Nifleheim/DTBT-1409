@@ -8,4 +8,4 @@ RUN chmod +x Store.sh
 
 RUN ./Backup.sh
 
-RUN ./Store.sh"
+RUN ./Store.sh
