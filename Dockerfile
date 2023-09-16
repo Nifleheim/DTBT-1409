@@ -1,5 +1,9 @@
-FROM 
+FROM debian:stable-slim
 
-RUN
+COPY ./Script ./Script
 
-CMD
+WORKDIR /Script
+
+RUN ./Store.sh
+
+CMD ["./Backup.sh"]
