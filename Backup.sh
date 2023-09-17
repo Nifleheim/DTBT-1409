@@ -10,7 +10,7 @@ PG_PORT="5432"
 TIMESTAMP=$(date +"%Y%m%d%H%M%S")
 
 # Backup directory (adjust to your preference)
-BACKUP_DIR="/db/backup"
+BACKUP_DIR="/database/backup"
 
 # Create a backup file
 BACKUP_FILE="$BACKUP_DIR/$PG_DB-$TIMESTAMP.sql"
@@ -20,9 +20,9 @@ pg_dump -h $PG_HOST -p $PG_PORT -U $PG_USER $PG_DB > $BACKUP_FILE
 
 # Check if the backup was successful
 if [ $? -eq 0 ]; then
-    echo "PostgreSQL backup completed successfully: $BACKUP_FILE"
+    echo "The PostgreSQL Backup is completed successfully: $BACKUP_FILE"
 else
-    echo "PostgreSQL backup failed"
+    echo "Unfortunately, The PostgreSQL Backup is failed"
     exit 1
 fi
 
